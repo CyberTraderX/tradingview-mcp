@@ -1,5 +1,9 @@
 # TradingView MCP Bridge
 
+> **About this copy.** This is the working copy used inside the Black Lapis research stack. It is derived from [tradesdontlie/tradingview-mcp](https://github.com/tradesdontlie/tradingview-mcp) (MIT) and tracks it as `upstream`; full credit for the design and the 78-tool CDP bridge goes to the original author. Here it sits alongside [MT5-Interlink](https://github.com/CyberTraderX/MT5-Interlink): TradingView is the Pine Script and chart-reading surface, MT5-Interlink is the parallel backtest and execution surface, and an MCP-driven agent works across both.
+>
+> Typical loop in this stack: an agent drafts or edits a Pine strategy, compiles it on the live chart, reads the strategy-tester results and drawn levels back through MCP, then hands the surviving idea to MT5-Interlink for every-tick validation across symbols before anything goes near execution.
+
 Personal AI assistant for your TradingView Desktop charts. Connects Claude Code to your locally running TradingView app via Chrome DevTools Protocol for AI-assisted chart analysis, Pine Script development, and workflow automation.
 
 > [!WARNING]
